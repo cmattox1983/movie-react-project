@@ -1,11 +1,10 @@
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
 import Search from "./pages/Search";
 import Movie from "./pages/Movie";
 
 function App() {
   return (
-    <Router>
       <>
         <Routes>
           <Route path="/" element={<Home />}></Route>
@@ -14,7 +13,6 @@ function App() {
           <Route path="/movie/:imdbID" element={<Movie />}></Route>
         </Routes>
       </>
-    </Router>
   );
 }
 
