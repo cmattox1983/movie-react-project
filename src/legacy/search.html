@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script>
+      const testPreloadImage = new Image();
+      testPreloadImage.src = "./assets/movieposterlandingpicture.jpg";
+    </script>
+    <link rel="stylesheet" href="style.css" />
+    <script src="search.js" defer></script>
+    <script
+      src="https://kit.fontawesome.com/d34fcc86fa.js"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      rel="preload"
+      as="image"
+      type="image/jpeg"
+      href="./assets/movieposterlandingpicture.jpg"
+    />
+    <link
+      rel="prefetch"
+      as="image"
+      href="./assets/movieposterlandingpicture.jpg"
+    />
+    <title>Posterize</title>
+  </head>
+  <body>
+    <nav class="nav__bar">
+      <img src="./assets/logo.png" alt="Nav Logo" class="logo nav__logo" />
+      <ul class="links nav__links">
+        <li><a href="index.html" class="link nav__link">Home</a></li>
+        <li>
+          <a href="search.html" class="link nav__link">Find Your Movies</a>
+        </li>
+        <li><button class="btn nav__link--contact">Contact</button></li>
+      </ul>
+      <button class="btn__menu" onclick="openMenu()">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+      <div class="menu__backdrop">
+        <button class="btn__menu btn__menu--close" onclick="closeMenu()">
+          <i class="fas fa-times"></i>
+        </button>
+        <ul class="menu__links">
+          <li>
+            <a
+              href="index.html"
+              class="menu__link"
+              onclick="delayedNav(event, 'index.html')"
+              >Home</a
+            >
+          </li>
+          <li>
+            <a href="#find_your_movie" class="menu__link" onclick="closeMenu()"
+              >Find Your Movies</a
+            >
+          </li>
+          <li>
+            <button class="menu__link--contact" onclick="closeMenu()">
+              Contact
+            </button>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <section id="search_bar">
+      <div class="search__info">
+        <h1 class="search__title">Browse our movies</h1>
+        <div class="search__wrapper">
+          <input id="searchInput" type="text" placeholder="Search by Title" />
+          <div class="search__wrapper--button">
+            <i class="search__button fa-solid fa-magnifying-glass"></i>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="find_your_movie">
+      <div class="container">
+        <div class="row search__row">
+          <div class="search__results">
+            <h2 class="search__results--title">Search Results for:</h2>
+          </div>
+          <div class="search__results--empty">No results found.</div>
+          <div class="search__controls">
+            <div class="search__status">
+              <p>Searching for: <span class="searching__term">""</span></p>
+            </div>
+            <select id="filter">
+              <option value disabled selected>Sort</option>
+              <option value="LOW_TO_HIGH">Year, Oldest to Newest</option>
+              <option value="HIGH_TO_LOW">Year, Newest to Oldest</option>
+            </select>
+          </div>
+          <div class="movie__links">
+            <div class="search__loading">
+              <i class="search__loading--spinner fa-solid fa-spinner"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>

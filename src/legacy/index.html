@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script>
+  const testPreloadImage = new Image();
+  testPreloadImage.src = "./assets/movieposterlandingpicture.jpg";
+</script>
+    <link rel="stylesheet" href="style.css" />
+    <script src="index.js" defer></script>
+    <script
+      src="https://kit.fontawesome.com/d34fcc86fa.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="preload" as="image" type="image/jpeg" href="./assets/movieposterlandingpicture.jpg">
+    <link rel="prefetch" as="image" href="./assets/movieposterlandingpicture.jpg">
+    <title>Posterize</title>
+  </head>
+  <body>
+    <section id="landing_page">
+      <nav class="nav__bar">
+        <img src="./assets/logo.png" alt="Nav Logo" class="logo nav__logo" />
+        <ul class="links nav__links">
+          <li><a href="#landing_page" class="link nav__link">Home</a></li>
+          <li>
+            <a href="search.html" class="link nav__link"
+              >Find Your Movies</a
+            >
+          </li>
+          <li><button class="btn nav__link--contact">Contact</button></li>
+        </ul>
+        <button class="btn__menu" onclick="openMenu()"><i class="fa-solid fa-bars"></i></button>
+        <div class="menu__backdrop">
+          <button class="btn__menu btn__menu--close" onclick="closeMenu()"><i class="fas fa-times"></i></button>
+          <ul class="menu__links">
+  <li><a href="#landing_page" class="menu__link" onclick="closeMenu()">Home</a></li>
+  <li><a href="search.html" class="menu__link" onclick="delayedNav(event, 'search.html')">Find Your Movies</a></li>
+  <li><button class="menu__link--contact" onclick="closeMenu()">Contact</button></li>
+</ul>
+        </div>
+      </nav>
+      <header>
+        <div class="container">
+          <div class="row">
+            <div class="header__description">
+              <h1 class="header__title">
+                The most-searched movie platform in the USA
+              </h1>
+              <h2 class="header__sub-title">
+                FIND YOUR FAVORITE MOVIES WITH
+                <span class="gold">POSTERIZE</span>
+              </h2>
+          <div class="header__wrapper search__wrapper">
+            <input id="searchInput" type="text" placeholder="Search by Title" />
+            <div class="search__wrapper--button">
+              <i class="search__button fa-solid fa-magnifying-glass"></i>
+            </div>
+          </div>
+                </div>
+            </div>
+          </div>
+        </div>
+      </header>
+  </body>
+  </html>
