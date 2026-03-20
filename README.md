@@ -18,11 +18,6 @@ Posterize is a React-based movie search application that allows users to search 
 
 ---
 
-## 📸 Screenshot
-![movie-react.png]
-
----
-
 ## ✨ Features
 - 🔍 Search movies by title
 - ⚡ Real-time API data fetching
