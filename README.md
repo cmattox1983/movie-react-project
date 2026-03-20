@@ -1,15 +1,42 @@
-# React + Vite
+# 🎬 Posterize Movie Project
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## 🚀 Overview
+Posterize is a React-based movie search application that allows users to search for movies by title and instantly view posters, summaries, ratings, and official IMDb links. It features real-time API integration, dynamic rendering, and sorting for a smooth browsing experience.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🛠 Tech Stack
+- React
+- HTML5
+- CSS3
+- IMDb API (OMDb)
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 🌐 Live Demo
+👉 [https://cmattox1983.github.io/movie-react-project/]
 
-# Movie React Project
-Test deploy trigger
+---
+
+## 📸 Screenshot
+![movie-react.png]
+
+---
+
+## ✨ Features
+- 🔍 Search movies by title
+- ⚡ Real-time API data fetching
+- 🖼 Display posters, ratings, and summaries
+- 🔗 Direct links to IMDb pages
+- 📊 Sort by newest, oldest, or highest rated
+- 🎨 Clean, responsive UI
+
+---
+
+## 📦 Installation
+
+```bash
+git clone https://github.com/yourusername/posterize.git
+cd posterize
+npm install
+npm run dev
